@@ -47,6 +47,7 @@
     - [b.7. Authentication and Authorization](#7-authentication-and-authorization)
     - [b.8. server](#8-overriding-global-servers-by-server)
     - [b.9. dry](#9-dry)
+    - [b.10. samples](#10-samples)
   - [c. DSLs written inside `components`'s block](#dsls-written-inside-componentss-block)
   - [d. Schema and Type](#schema-and-type)
     - [d.1. (Schema) Type](#schema-type)
@@ -591,6 +592,24 @@
   dry skip: [:id, :name]
   # `only` is used to specify which parameters will be taken from dry blocks
   dry only: [:id]
+  ```
+
+#### (10) `samples`
+
+  You can display code samples by passing an array of code sample objects.
+  See https://github.com/Rebilly/ReDoc/blob/master/docs/redoc-vendor-extensions.md#codeSampleObject for information.
+
+  ```ruby
+  # ** Method Signature
+  samples array
+
+  # ** Usage
+  samples [
+    {
+      "lang": "Ruby",
+      "source": "puts 'Hello World!'"
+    }
+  ]
   ```
 
 ### DSLs written inside [components](#3-components-optional)'s block

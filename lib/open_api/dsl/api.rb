@@ -95,6 +95,10 @@ module OpenApi
         form data: { name => schema }
       end
 
+	  def samples samples=[]
+		  self[ "x-code-samples" ] = samples
+	  end
+
       def response code, desc, media_type = nil, headers: { }, data: { }, **options
         (self[:responses][code] ||= ResponseObj.new(desc)).absorb(desc, media_type, headers: headers, data: data, **options)
       end
